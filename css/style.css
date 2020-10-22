@@ -1,9 +1,25 @@
+@font-face {
+    font-family: "SFProDisplay-Regular";
+    src: local("SFProDisplay-Regular"),
+        url(../fonts/SFProDisplay-Regular.woff) format("woff"),
+        url(../fonts/SFProDisplay-Regular.woff2) format("woff2");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "SFProDisplay-Semibold";
+    src: local("SFProDisplay-Semibold"),
+        url(../fonts/SFProDisplay-Semibold.woff) format("woff"),
+        url(../fonts/SFProDisplay-Semibold.woff2) format("woff2");
+    font-weight: bold;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "SFProDisplay-Regular", sans-serif;
     background: #E5E5E5;
 }
 
@@ -87,10 +103,13 @@ body {
     max-width: 1200px;
     width: 90%;
     margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .posts {
-    max-width: 800px;
+    width: 67%;
     color: #262626;
 
 }
@@ -106,9 +125,10 @@ body {
 }
 
 .post-title {
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-weight: bold;
     margin-top: 0;
     margin-bottom: 19px;
-    font-weight: 600;
     font-size: 16px;
     line-height: 24px;
 }
@@ -185,4 +205,171 @@ body {
     font-size: 12px;
     line-height: 20px;
     color: #BFBFBF;
+}
+
+/* Sidebar*/
+.sidebar {
+    width: 31%;
+}
+
+.user {
+    background: #FAFAFA;
+    border: 1px solid #E8E8E8;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-avatar {
+    border-radius: 50%;
+    margin-right: 17px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.user-name {
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+}
+
+.exit .icon {
+    width: 20px;
+    height: 20px;
+    fill: #000;
+}
+
+.sidebar-nav {
+    background-color: #fff;
+}
+
+.sidebar-menu {
+    margin: 0;
+    border: 1px solid #e8e8e8;
+    border-top: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu-link {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 22px;
+    color: #595959;
+    padding: 16px 48px;
+    display: inline-block;
+    width: 100%;
+
+}
+
+.sidebar-menu-link:hover {
+    background-color: #FFFBE6;
+
+}
+
+.sidebar-menu-link.active {
+    color: #FAAD14;
+    background-color: #FFFBE6;
+    border-right: 3px solid #FAAD14;
+}
+
+.button {
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+    background: #FAAD14;
+    border-radius: 4px;
+    padding: 13px;
+}
+
+.button-new-post {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.icon-fire {
+    fill: #fff;
+    width: 11px;
+    height: 13px;
+    margin-right: 10px;
+
+}
+
+.card {
+    background: #FFFFFF;
+    border: 1px solid #E8E8E8;
+    margin-top: 20px;
+
+}
+
+.card-header {
+    border-bottom: 1px solid #E8E8E8;
+    padding: 23px 25px;
+}
+
+.card-title {
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+    margin: 0;
+
+}
+
+.card-body {
+    padding: 22px 40px 20px 25px;
+}
+
+
+.card-body-title {
+    font-family: "SFProDisplay-Semibold", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #D48806;
+    text-decoration: none;
+    margin: 0 0 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 22px;
+    color: #262626;
+    margin: 10px 0;
+}
+
+.promo {
+    width: 100%;
+    height: 260px;
+    border: 1px solid #E8E8E8;
+    margin-top: 20px;
+    background: url(../img/promo.jpg) no-repeat center / cover;
+    position: relative;
+    display: block;
+}
+
+.promo::before {
+    content: 'Реклама';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #C4C4C4;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FFFFFF;
+    padding: 0 26px;
 }
